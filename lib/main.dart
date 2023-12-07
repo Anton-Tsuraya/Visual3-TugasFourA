@@ -35,75 +35,113 @@ class _MainPageState extends State<MainPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: _isiHalaman[_halamanAktif]["halaman"],
-      appBar: AppBar(
-        title: Text(_isiHalaman[_halamanAktif]["title"]),
-      ),
-      drawer: Drawer(
-        child: ListView(
-          children: [
-            ListTile(
-              // leading: Icon(Icons.numbers),
-              title: Text("Jejar Genjang"),
-              trailing: Icon(Icons.arrow_right),
-              onTap: () {
-                setState(() {
-                  _halamanAktif = 0;
-                });
-                Navigator.pop(context);
-              },
-            ),
-            ListTile(
-              // leading: Icon(Icons.thermostat),
-              title: Text("Lingkaran"),
-              trailing: Icon(Icons.arrow_right),
-              onTap: () {
-                setState(() {
-                  _halamanAktif = 1;
-                });
-                Navigator.pop(context);
-              },
-            ),
-            ListTile(
-              // leading: Icon(Icons.square_foot),
-              title: Text("Persegi"),
-              trailing: Icon(Icons.arrow_right),
-              onTap: () {
-                setState(() {
-                  _halamanAktif = 2;
-                });
-                Navigator.pop(context);
-              },
-            ),
-            ListTile(
-              // leading: Icon(Icons.circle),
-              title: Text("Persegi Panjang"),
-              trailing: Icon(Icons.arrow_right),
-              onTap: () {
-                setState(() {
-                  _halamanAktif = 3;
-                });
-                Navigator.pop(context);
-              },
-            ),
-            ListTile(
-              // leading: Icon(Icons.circle),
-              title: Text("Segitiga Sama Kaki"),
-              trailing: Icon(Icons.arrow_right),
-              onTap: () {
-                setState(() {
-                  _halamanAktif = 4;
-                });
-                Navigator.pop(context);
-              },
-            ),
-
-            Divider(
-              thickness: 1,
-            ),
-          ],
+      //       // body: _isiHalaman[_halamanAktif]["halaman"],
+      // appBar: AppBar(
+      //   title: Text(_isiHalaman[_halamanAktif]["title"]),
+      // ),
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              SizedBox(height: 10),
+              Text('Pilih Bangun Datar', style: TextStyle(fontSize: 20)),
+              SizedBox(height: 30),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Container(
+                    height: 100,
+                    width: 150,
+                    decoration: BoxDecoration(
+                      color: Colors.blue,
+                      border: Border.all(color: Colors.black, width: 2),
+                    ),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text('Persegi', style: TextStyle(fontSize: 16)),
+                      ],
+                    ),
+                  ),
+                  SizedBox(width: 50),
+                  Container(
+                    height: 100,
+                    width: 150,
+                    decoration: BoxDecoration(
+                      color: Colors.blue,
+                      border: Border.all(color: Colors.black, width: 2),
+                    ),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text('Persegi Panjang', style: TextStyle(fontSize: 16)),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(height: 20),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Container(
+                    height: 100,
+                    width: 150,
+                    decoration: BoxDecoration(
+                      color: Colors.blue,
+                      border: Border.all(color: Colors.black, width: 2),
+                    ),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text('Jejar', style: TextStyle(fontSize: 16)),
+                        Text('Genjang', style: TextStyle(fontSize: 16)),
+                      ],
+                    ),
+                  ),
+                  SizedBox(width: 50),
+                  Container(
+                    height: 100,
+                    width: 150,
+                    decoration: BoxDecoration(
+                      color: Colors.blue,
+                      border: Border.all(color: Colors.black, width: 2),
+                    ),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text('Lingkaran', style: TextStyle(fontSize: 16)),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(height: 20),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Container(
+                    height: 100,
+                    width: 150,
+                    decoration: BoxDecoration(
+                      color: Colors.blue,
+                      border: Border.all(color: Colors.black, width: 2),
+                    ),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text('Segitiga', style: TextStyle(fontSize: 16)),
+                        Text('Sama Kaki', style: TextStyle(fontSize: 16)),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ],
+          ),
         ),
-      ),
-    );
+
+);
+
   }
 }
